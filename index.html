@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>SubNet Calc</title>
+
+  <!-- CSS  -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">SubNetCalc</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Ayuda</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Ayuda</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center blue-text">IP</h1>
+      <div class="row">
+        <div class="input-field offset-s2 col s2">
+            <input id="first_name2" type="number" class="validate" name="IP" onkeypress="return isNumber(event)">
+            <label class="no-select" for="first_name2">1°</label>
+        </div>
+        <div class="input-field col s2">
+            <input id="first_name2" type="number" class="validate" name="IP"  onkeypress="return isNumber(event)">
+            <label class="no-select" for="first_name2">2°</label>
+        </div>
+        <div class="input-field col s2">
+            <input id="first_name2" type="number" class="validate" name="IP" onkeypress="return isNumber(event)">
+            <label class="no-select" for="first_name2">3°</label>
+        </div>
+        <div class="input-field col s2">
+            <input id="first_name2" type="number" class="validate" name="IP" onkeypress="return isNumber(event)">
+            <label class="no-select" for="first_name2">4°</label>
+        </div>
+      </div>
+       <div class="container" id="Contenedor">
+        <div class="row" id="Clon" name="Fila">
+         <div class="input-field col s3">
+            
+            <input type="number" class="validate" name="Hosts" onkeypress="return isNumber(event)">
+            <label class="no-select">#Hosts</label>
+         </div>
+        </div>           
+       </div>
+      <div id="Bajo" class="row center section scrollspy">
+          <a class="btn-floating btn-large waves-effect waves-light red btn tooltipped" data-position="bottom" data-tooltip="Agregar Hosts" id=Mas href="#Bajo"><i class="mdi-content-add"></i></a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <!--  Scripts-->
+<!--  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/calc.js"></script>
+  <script>
+        $(document).ready(function() {
+    $('select').material_select();
+  });
+  </script>
+  <script>
+      function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+  </script>
+
+
+  </body>
+</html>
