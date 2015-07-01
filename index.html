@@ -7,10 +7,11 @@
 
   <!-- CSS  -->
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="light-blue lighten-1" role="navigation">
+  <nav class="blue darken-3" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">SubNetCalc</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Ayuda</a></li>
@@ -56,11 +57,24 @@
         </div>           
        </div>
       <div id="Bajo" class="row center section scrollspy">
-          <a class="btn-floating btn-large waves-effect waves-light red btn tooltipped" data-position="bottom" data-tooltip="Agregar Hosts" id=Mas href="#Bajo"><i class="mdi-content-add"></i></a>
+          <a class="btn-floating btn-large waves-effect waves-light green btn tooltipped" data-position="bottom" data-tooltip="Agregar Hosts" id=Mas href="#Bajo"><i class="large material-icons">add</i></a>
       </div>
       <br><br>
 
     </div>
+  </div>
+    
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a id="Toggle" class="btn-floating btn-large blue darken-2">
+      <i class="material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a href="#index-banner" class="btn-floating blue"><i class="material-icons">home</i></i></a></li>
+      <li><a class="btn-floating green darken-2"><i class="material-icons">skip_previous</i></a></li>
+      <li><a class="btn-floating green darken-2"><i class="material-icons">skip_next</i></a></li>
+      <li><a class="btn-floating yellow darken-2"><i class="material-icons">help_outline</i></a></li>
+      <li><a href="index.html" class="btn-floating red darken-3"><i class="material-icons">delete</i></a></li>
+    </ul>
   </div>
 
 
@@ -84,11 +98,6 @@
             }
             return true;
         }
-  </script>
-  <script>
-      function isReload(){
-          document.location.reload(true);
-      }
   </script>
   </body>
 </html>
