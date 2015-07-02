@@ -5664,8 +5664,14 @@ button.btn-floating {
       margin-bottom: 15px; }
     .fixed-action-btn ul a.btn-floating {
       opacity: 0; }
-.fixed-action-btn ul {display:none;}
-.fixed-action-btn.activo ul {display:block;}
+.fixed-action-btn ul { 
+  visibility:hidden;
+  opacity:0;
+  transition:visibility 0s linear 0.5s,opacity 0.5s linear; }
+.fixed-action-btn.activo ul {
+  visibility:visible;
+  opacity:1;
+  transition-delay:0s;}
 
 .btn-flat {
   box-shadow: none;
