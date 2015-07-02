@@ -3195,6 +3195,7 @@ $(document).ready(function(){
 //    });
       //**** Arriba se comento para dar paso al codigo con el que se da funcion de toggle a los fixed action button***///
       $(document).on('click.fixedActionBtn', '.fixed-action-btn', function(e) {
+          $(this).toggleClass("activo");
         var state = $(this).data('state');
         var $this = $(this);
         switch(state){
