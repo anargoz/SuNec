@@ -11,8 +11,13 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="blue darken-3" role="navigation">
+  <nav class="blue darken-3" role="navigation" id="inicio">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">SubNetCalc</a>
+        <ul id="nav-mobile" class="side-nav">
+        <li><a href="#inicio">Inicio</a></li>
+        <li name="Vinculo"><a href="#Hosts0" name="Texto"></a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>
   </nav>
   <div class="section no-pad-bot" id="index-banner">
@@ -38,10 +43,10 @@
         </div>
       </div>
        <div class="container" id="Contenedor">
-        <div class="row" id="Clon" name="Fila">
+        <div class="row" name="Fila" id="Hosts0">
          <div class="input-field col s3">
             
-            <input type="number" class="validate" id="Hosts" name="Hosts" onkeypress="return isNumber(event)">
+            <input type="number" class="validate" name="Hosts" onkeypress="return isNumber(event)">
             <label class="no-select">#Hosts</label>
          </div>
         </div>           
@@ -54,12 +59,21 @@
     </div>
   </div>
     
+<!--
+  <nav class="nav navbar navbar-default navbar-fixed-top">
+      <ul id="Scroll" class="nav navbar-nav">
+        <li><a href="#inicio">Inicio</a></li>
+        <li name="Vinculo" class="active"><a href="#Hosts0">0° Host</a></li>
+      </ul>
+  </nav>
+-->
+
     <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
     <a id="Toggle" class="btn-floating btn-large blue darken-2">
       <i class="mdi-image-edit"></i>
     </a>
     <ul>
-      <li><a href="#logo-container" class="btn-floating blue"><i class="mdi-action-home"></i></a></li>
+      <li><a href="#inicio" class="btn-floating blue"><i class="mdi-action-home"></i></a></li>
       <li><a href="index.html" class="btn-floating yellow darken-3"><i class="mdi-action-help"></i></a></li>
       <li><a href="index.html" class="btn-floating red darken-3"><i class="mdi-action-delete"></i></a></li>
     </ul>
@@ -72,15 +86,6 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/calc.js"></script>
-<!--
-  <script>
-      $(document).ready(function(){
-        $('a#Toggle').click(function(){
-            $(this).toggle("down");
-        });
-      });
-  </script>
--->
   <script>
         $(document).ready(function() {
             $('select').material_select();          
@@ -96,5 +101,6 @@
             return true;
         }
   </script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>

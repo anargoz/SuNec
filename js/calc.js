@@ -284,26 +284,38 @@ $(function () {
 });
 /*--------------------------------------------------------------------------------------------------------------------*/
 $(function () {
-    var i = 0;
+    var i = 0,
+        idN = 0;
     $("#Mas").click(function () {
         var Row = document.createElement("div"),
             Input = document.createElement("div"),
             Texto = document.createElement("input"),
             Etiqueta = document.createElement("label"),
+            Linea = document.createElement("li"),
+            Vinc = document.createElement("a"),
             Host = (parseInt(document.getElementsByName("Hosts")[i].value, 10));
         if (isNaN(Host) || Host <= 0) {
             i = i;
         } else {
-        
+            idN = i + 1;
             Etiqueta.innerHTML = "#Hosts";
             Texto.type = "number";
             Texto.className = "validate";
             Texto.setAttribute("name", "Hosts");
-            Texto.setAttribute("onkeypress","return isNumber(event)");
+            Texto.setAttribute("onkeypress", "return isNumber(event)");
             Input.setAttribute("class", "input-field col s3");
             Input.setAttribute("name", "InputF");
             Row.className = "row";
             Row.setAttribute("name", "Fila");
+            Row.setAttribute("id", "Hosts"+idN);
+
+            Linea.setAttribute("name", "Vinculo");
+            Vinc.setAttribute("name", "Texto" + idN);
+            Vinc.setAttribute("href", "#Hosts" + idN);
+
+            document.getElementsByName("Texto")[i].innerHTML = Host + " Hosts";
+            document.getElementById("nav-mobile").appendChild(Linea);
+            document.getElementsByName("Vinculo")[i + 1].appendChild(Vinc);
 
             document.getElementById("Contenedor").appendChild(Row);
             document.getElementsByName("Fila")[i + 1].appendChild(Input);
