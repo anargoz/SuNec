@@ -3199,8 +3199,7 @@ $(document).ready(function(){
         var $this = $(this);
         switch(state){
             case 1 :
-            case undefined : 
-                
+            case undefined :
                 $this.find('ul .btn-floating').velocity(
                     { scaleY: ".4", scaleX: ".4", translateY: "40px"},
                     { duration: 0 });
@@ -3213,17 +3212,14 @@ $(document).ready(function(){
                 time += 40;
               }); 
               $(this).data('state', 2); break;
-                
             case 2 : 
               var time = 0;
               $this.find('ul .btn-floating').velocity("stop", true);
               $this.find('ul .btn-floating').velocity(
                 { opacity: "0", scaleX: ".4", scaleY: ".4", translateY: "40px"},
                 { duration: 80 });
-              $(this).data('state', 1);break;
+              $(this).data('state', 1); break;
         }
-      
-
     });
 
   });
