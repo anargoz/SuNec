@@ -309,18 +309,18 @@ $(function () {
             Row.setAttribute("name", "Fila");
             Row.setAttribute("id", "Hosts"+idN);
 
-            Linea.setAttribute("name", "Vinculo");
-            Vinc.setAttribute("name", "Texto" + idN);
-            Vinc.setAttribute("href", "#Hosts" + idN);
-
-            document.getElementsByName("Texto")[i].innerHTML = Host + " Hosts";
-            document.getElementById("nav-mobile").appendChild(Linea);
-            document.getElementsByName("Vinculo")[i + 1].appendChild(Vinc);
-
             document.getElementById("Contenedor").appendChild(Row);
             document.getElementsByName("Fila")[i + 1].appendChild(Input);
             document.getElementsByName("InputF")[i].appendChild(Texto);
             document.getElementsByName("InputF")[i].appendChild(Etiqueta);
+
+            Linea.setAttribute("name", "Vinculo");
+            Vinc.setAttribute("name", "Texto");
+            Vinc.setAttribute("href", "#Hosts" + idN);
+
+            document.getElementById("nav-mobile").appendChild(Linea);
+            document.getElementsByName("Vinculo")[i + 1].appendChild(Vinc);
+            document.getElementsByName("Texto")[i].innerHTML = Host + " Hosts";
 
             i = i + 1;
         }
