@@ -3184,7 +3184,7 @@ $(document).ready(function(){
 
     });
 
-    $(document).on('mouseleave.fixedActionBtn', '.fixed-action-btn', function(e) {
+    $(document).on('click.fixedActionBtn', '.fixed-action-btn', function(e) {
       var $this = $(this);
 
       var time = 0;
