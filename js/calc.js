@@ -323,6 +323,8 @@ $(function () {
             document.getElementsByName("Vinculo")[i + 1].appendChild(Vinc);
             document.getElementsByName("Texto")[i].innerHTML = Host + " Hosts";
 
+
+            Materialize.toast('<span>Se agregaron &nbsp</span> ' + Host + ' <span>&nbsp Hosts</span>', 3000);
             i = i + 1;
         }
     });
