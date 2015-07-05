@@ -14,7 +14,6 @@
   <nav class="blue darken-3" role="navigation" id="inicio">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">SubNetCalc</a>
         <ul id="nav-mobile" class="side-nav">
-        <li><a href="#inicio">Inicio</a></li>
         <li name="Vinculo"><a href="#Hosts0" name="Texto"></a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
@@ -74,11 +73,24 @@
     </a>
     <ul>
       <li><a href="#inicio" class="btn-floating blue"><i class="mdi-action-home"></i></a></li>
-      <li><a href="index.html" class="btn-floating yellow darken-3"><i class="mdi-action-help"></i></a></li>
+      <li><a class="btn-floating yellow darken-3 modal-trigger" href="#modal1"><i class="mdi-action-help"></i></a></li>
       <li><a href="index.html" class="btn-floating red darken-3"><i class="mdi-action-delete"></i></a></li>
     </ul>
   </div>
-
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <a class="btn-floating green darken-3"><i class="mdi-content-add"></i></a> Agregar
+      <p>Calcula la siguiente <strong>Direccion de Red, IP Inicial, IP Final, BroadCast, y Mascara de Subred</strong> con base al numero de <strong>Hosts</strong> deseados.</p>
+      <a class="btn-floating red darken-3"><i class="mdi-action-delete"></i></a> Borrar
+      <p><strong>Elimina</strong> todos los calculos actuales, asi como la <strong>IP</strong> que se ingreso.</p>
+      <a class="btn-floating blue"><i class="mdi-action-home"></i></a> Inicio
+      <p>Regresa al <strong>Inicio</strong> de la pagina.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+  </div>
 
   <!--  Scripts-->
 <!--  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
@@ -90,6 +102,17 @@
         $(document).ready(function() {
             $('select').material_select();          
         });
+
+        $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+      });
+
+
+      $('.button-collapse').sideNav({
+          closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        }
+      );
   </script>
   <script>
       function isNumber(evt) {
@@ -101,6 +124,10 @@
             return true;
         }
   </script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ <script>
+  $(document).ready(function(){
+    $('.tooltipped').tooltip({delay: 50});
+  });
+ </script>
   </body>
 </html>

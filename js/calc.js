@@ -33,7 +33,8 @@ $(function () {
             iPoct3f = 0;
         /*-----------Valor de Host--------- */
         if (isNaN(Host) || Host <= 0) {
-            alert("Debes introducir la cantidad de Hosts");
+//            alert("Debes introducir la cantidad de Hosts");
+            Materialize.toast('<span>Introduce un número valido de Hosts</span>', 5000);
         } else {
             if (Nodo === 0) {
                 iPoct1 = (parseInt(document.getElementsByName("IP")[0].value, 10)) + iPoct1;
@@ -307,7 +308,7 @@ $(function () {
             Input.setAttribute("name", "InputF");
             Row.className = "row";
             Row.setAttribute("name", "Fila");
-            Row.setAttribute("id", "Hosts"+idN);
+            Row.setAttribute("id", "Hosts" + idN);
 
             document.getElementById("Contenedor").appendChild(Row);
             document.getElementsByName("Fila")[i + 1].appendChild(Input);
