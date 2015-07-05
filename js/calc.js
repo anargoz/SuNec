@@ -280,6 +280,9 @@ $(function () {
             document.getElementsByName("Result")[cont].appendChild(thead);
             document.getElementsByName("Result")[cont].appendChild(tbody);
             cont = cont + 1;
+            if (isNaN(AltIP1)) {
+                Materialize.toast('<span>BATMAN!!!!</span>', 2000);
+            }
         }
     });
 });
