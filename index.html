@@ -119,5 +119,19 @@
     $('.tooltipped').tooltip({delay: 50});
   });
  </script>
+ <script>
+    $('.validate').keydown(function (e) {
+         if (e.which === 190 || e.which === 110) {
+             var index = $('.validate').index(this) + 1;
+             $('.validate').eq(index).focus();
+             return false;
+         }
+     });
+    $('.validate').keydown(function(e) {
+    if ((e.which == 8 || e.which == 46) && $(this).val() =='') {
+        $(this).prev('validate').focus();
+    }
+});
+ </script>
   </body>
 </html>
