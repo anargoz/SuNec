@@ -25,19 +25,19 @@
       <h1 class="header center blue-text">IP</h1>
       <div class="row">
         <div class="input-field offset-s2 col s2">
-            <input id="first_name2" type="number" class="validate" name="IP" onkeypress="return isNumber(event)">
+            <input id="first_name2" type="number" class="validate ip" name="IP" onkeypress="return isNumber(event)">
             <label class="no-select" for="first_name2">1°</label>
         </div>
         <div class="input-field col s2">
-            <input id="first_name2" type="number" class="validate" name="IP"  onkeypress="return isNumber(event)">
+            <input id="first_name2" type="number" class="validate ip" name="IP"  onkeypress="return isNumber(event)">
             <label class="no-select" for="first_name2">2°</label>
         </div>
         <div class="input-field col s2">
-            <input id="first_name2" type="number" class="validate" name="IP" onkeypress="return isNumber(event)">
+            <input id="first_name2" type="number" class="validate ip" name="IP" onkeypress="return isNumber(event)">
             <label class="no-select" for="first_name2">3°</label>
         </div>
         <div class="input-field col s2">
-            <input id="first_name2" type="number" class="validate" name="IP" onkeypress="return isNumber(event)">
+            <input id="first_name2" type="number" class="validate ip" name="IP" onkeypress="return isNumber(event)">
             <label class="no-select" for="first_name2">4°</label>
         </div>
       </div>
@@ -127,9 +127,14 @@
              return false;
          }
      });
-    $('.validate').keydown(function(e) {
-    if ((e.which == 8 || e.which == 46) && $(this).val() =='') {
-        $(this).prev('validate').focus();
+ </script>
+ <script>
+    $('.ip').keydown(function(e)
+{
+    if($(this).val() =='' && e.which ==8)
+    {
+        var index = $('.ip').index(this) - 1;
+        $('.ip').eq(index).focus();
     }
 });
  </script>
