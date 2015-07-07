@@ -280,6 +280,9 @@ $(function () {
             document.getElementsByName("Result")[cont].appendChild(thead);
             document.getElementsByName("Result")[cont].appendChild(tbody);
             cont = cont + 1;
+            if (isNaN(AltIP1)) {
+                Materialize.toast('<span>BATMAN!!!!</span>', 2000);
+            }
         }
     });
 });
@@ -323,6 +326,8 @@ $(function () {
             document.getElementsByName("Vinculo")[i + 1].appendChild(Vinc);
             document.getElementsByName("Texto")[i].innerHTML = Host + " Hosts";
 
+
+            Materialize.toast('<span>Se agregaron &nbsp</span> ' + Host + ' <span>&nbsp Hosts</span>', 3000);
             i = i + 1;
         }
     });
